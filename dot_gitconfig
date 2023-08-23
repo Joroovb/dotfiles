@@ -1,0 +1,7 @@
+[user]
+	email = jorisvanbreugel@mailbox.org
+	name = Joroovb
+	github = Joroovb
+    signingkey = 0xAC75CE602959A559
+[commit]
+	gpgsign = true
