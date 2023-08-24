@@ -10,6 +10,10 @@ shopt -s extglob
 shopt -s globstar
 shopt -s checkjobs
 
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 alias cat='bat'
 alias changed='ls --sort=changed'
 alias f='fzf --preview '\''bat --style=numbers --color=always --line-range :500 {}'\'''
