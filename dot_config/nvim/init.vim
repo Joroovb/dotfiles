@@ -333,7 +333,7 @@ augroup vimrc-make-cmake
   autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
 augroup END
 
-au BufNewFile ~/Sync/vimwiki/diary/*.md :silent 0r !~/Sync/bin/generate-diary-entry '%'
+au BufNewFile ~/Sync/vimwiki/diary/*.md :silent 0r !generate-diary-entry '%'
 " au BufWrite ~/Sync/vimwiki/diary/*.md :silent 0r !~/Sync/bin/update-todo '%'
 
 set autoread
