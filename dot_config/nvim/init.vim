@@ -112,6 +112,7 @@ endif
 
 Plug 'vimwiki/vimwiki'
 Plug 'junegunn/goyo.vim'
+Plug 'tools-life/taskwiki'
 
 call plug#end()
 
@@ -608,6 +609,9 @@ let g:vimwiki_list = [{
             \ 'custom_wiki2html': '~/Sync/bin/wiki2html.sh'}]
 
 let g:vimwiki_global_ext = 0
+
+"" Taskwiki
+let g:taskwiki_dont_fold = 1
 
 
 "*****************************************************************************
