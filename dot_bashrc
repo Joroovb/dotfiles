@@ -11,9 +11,11 @@ shopt -s extglob
 #shopt -s checkjobs
 
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent updatestartuptty /bye > /dev/null
 gpgconf --launch gpg-agent
 
 alias cat='bat'
@@ -71,6 +73,10 @@ _fzf_comprun() {
     ssh)          fzf --preview 'dig {}'                   "$@" ;;
     *)            fzf --preview 'bat -n --color=always {}' "$@" ;;
   esac
+}
+
+cheat() {
+    cht.sh "$@" | bat
 }
 
 __bash_prompt() {
