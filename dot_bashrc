@@ -6,11 +6,14 @@ HISTSIZE=10000
 
 shopt -s histappend
 shopt -s checkwinsize
-shopt -s extglob
+#shopt -s extglob
 #shopt -s globstar
 #shopt -s checkjobs
 
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=$PATH:/Users/jorisvanbreugel/.cargo/bin
+export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+export PATH=$PATH:$HOME/go/bin
 
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
@@ -93,3 +96,4 @@ __bash_prompt() {
 }
 __bash_prompt
 
+eval "$(zoxide init bash)"
